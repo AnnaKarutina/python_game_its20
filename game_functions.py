@@ -41,3 +41,10 @@ def update_screen(game_settings, screen, ship, bullets):
     ship.blitme()
     # display the last screen
     pygame.display.flip()
+
+def update_bullets(bullets):
+    """Update bullets position and remove old bullets"""
+    bullets.update()
+    for bullet in bullets.copy():
+        if bullet.rect.bottom <= 0:
+            bullets.remove(bullet)
