@@ -5,7 +5,7 @@ class Bullet(Sprite):
     """Bullet control class"""
     def __init__(self, game_setting, screen, ship):
         """Create bullet object at ship position"""
-        super.__init__()
+        super().__init__()
         self.screen = screen
         # create bullet
         self.rect = pygame.Rect(0, 0, game_setting.bullet_width, game_setting.bullet_height)
