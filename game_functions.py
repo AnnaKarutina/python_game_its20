@@ -90,3 +90,7 @@ def create_fleet(game_settings, screen, ship, aliens):
         for alien_number in range(number_aliens_x):
             create_alien(game_settings, screen, aliens, alien_number, row_number)
 
+def update_aliens(aliens):
+    """Update aliens position"""
+    aliens.update()
+
