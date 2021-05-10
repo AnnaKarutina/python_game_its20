@@ -48,7 +48,7 @@ def check_play_button(game_settings, screen, stats, play_button, ship, aliens, b
         create_fleet(game_settings, screen, ship, aliens)
         ship.ship_center()
 
-def update_screen(game_settings, screen, stats, ship, aliens, bullets, play_button):
+def update_screen(game_settings, screen, stats, sb, ship, aliens, bullets, play_button):
     """Update image on screen and draw new screen"""
     # add screen background
     screen.fill(game_settings.bg_color)
@@ -58,6 +58,8 @@ def update_screen(game_settings, screen, stats, ship, aliens, bullets, play_butt
     ship.blitme()
     # add alien to screen
     aliens.draw(screen)
+    # show scoreboard
+    sb.draw_score()
     # dispaly play button
     if not stats.game_active:
         play_button.draw_button()
