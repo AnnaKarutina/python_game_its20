@@ -70,6 +70,7 @@ def check_bullet_alien_collisions(game_settings, screen, ship, aliens, bullets):
     # Remove bullets and create new fleet
     if len(aliens) == 0:
         bullets.empty()
+        game_settings.increase_speed()
         create_fleet(game_settings, screen, ship, aliens)
 
 def fire_bullet(game_settings, screen, ship, bullets):
