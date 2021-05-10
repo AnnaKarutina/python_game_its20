@@ -21,9 +21,9 @@ class Settings:
         self.init_dynamic_settings()
 
     def init_dynamic_settings(self):
-        self.ship_speed_factor = 0.5
-        self.bullet_speed_factor = 0.5
-        self.alien_speed_factor = 0.5
+        self.ship_speed_factor = 1.5
+        self.bullet_speed_factor = 1.5
+        self.alien_speed_factor = 1.5
 
         # fleet derection right = 1, left = -1
         self.fleet_direction = 1
